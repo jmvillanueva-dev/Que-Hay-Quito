@@ -1,7 +1,9 @@
 import React from "react";
 import "./../styles/header.css";
+import Button from "./Button";
 
 import iconLogo from "../../public/iconQQ.svg"
+import userIcon from "../assets/icons/userIcon.svg";
 import logo from "../assets/logo.svg";
 import searchIcon from "../assets/icons/search.svg";
 
@@ -25,8 +27,13 @@ return (
     <div className="search-login">
         <img src={searchIcon} alt="icon search" />
         <input type="text" placeholder="Encuentra lo que buscas..." />
-        <button>Buscar</button>
-        <button className="login-btn">Iniciar sesión</button>
+        <Button variant="white">Buscar</Button>
+        <Button variant="blue">
+            <div className="login-button">
+                <img src={userIcon} alt="icon search" />
+                <span>Iniciar Sesión</span>
+            </div>
+        </Button>
     </div>
     </div>
 </header>
