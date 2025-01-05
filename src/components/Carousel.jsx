@@ -1,73 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./../styles/carousel.css";
 
-import img1 from "../assets/centro-historico.png";
-import img2 from "../assets/iglesia-compania.png";
-import img3 from "../assets/virgen-panecillo-quito.png";
+import img1ForHero from "../../public/img/centro-historico.png";
+import img2ForHero from "../../public/img/iglesia-compania.png";
+import img3ForHero from "../../public/img/virgen-panecillo-quito.png";
 
 const Carousel = () => {
-const images = [img1, img2, img3];
-const [currentIndex, setCurrentIndex] = useState(0);
+const [current, setCurrent] = useState(0);
+const images = [
+{ src: img1ForHero, title: "Destino 1", desc: "Explora paisajes inolvidables." },
+{ src: img2ForHero, title: "Destino 2", desc: "Aventuras en la naturaleza." },
+{ src: img3ForHero, title: "Destino 3", desc: "Relájate y disfruta de la vista." },
+];
 
-useEffect(() => {
-const interval = setInterval(() => {
-    goToNext();
-}, 5000);
-return () => clearInterval(interval);
-}, [currentIndex]);
-
-const goToNext = () => {
-setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+const handlePrev = () => {
+setCurrent(current === 0 ? images.length - 1 : current - 1);
 };
 
-const goToPrev = () => {
-setCurrentIndex((prevIndex) =>
-    prevIndex === 0 ? images.length - 1 : prevIndex - 1
-);
-};
-
-const goToSlide = (index) => {
-setCurrentIndex(index);
+const handleNext = () => {
+setCurrent(current === images.length - 1 ? 0 : current + 1);
 };
 
 return (
-<div className="carousel">
-    <div
-    className="carousel-slide"
-    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-    >
+<div className="carousel"> 
     {images.map((image, index) => (
-        <div
+    <div    
         key={index}
-        className="carousel-item"
-        style={{ backgroundImage: `url(${image})` }}
-        >
+        className={`carousel-item ${index === current ? "active" : ""}`}
+    >
+        <img src={image.src} alt={image.title} className="carousel-image" />
         <div className="carousel-caption">
-            <h1>Descubre lugares dignos de visitar</h1>
-            <p>{`Slide ${index + 1}`}</p>
+        <h3>{image.title}</h3>
+        <p>{image.desc}</p>
         </div>
-        </div>
+    </div>
     ))}
-    </div>
 
-    <div className="carousel-controls">
-    <button className="prev" onClick={goToPrev}>
-        ❮
+    {/* Controles */}
+    <button className="carousel-control prev" onClick={handlePrev}>
+    &#10094;
     </button>
-    <button className="next" onClick={goToNext}>
-        ❯
+    <button className="carousel-control next" onClick={handleNext}>
+    &#10095;
     </button>
-    </div>
-
-    <div className="carousel-indicators">
-    {images.map((_, index) => (
-        <button
-        key={index}
-        className={`indicator ${index === currentIndex ? "active" : ""}`}
-        onClick={() => goToSlide(index)}
-        />
-    ))}
-    </div>
 </div>
 );
 };
