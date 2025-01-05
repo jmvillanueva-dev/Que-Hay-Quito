@@ -3,7 +3,7 @@
     border-bottom: 1px solid #eaeaea;
     padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -13,34 +13,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0056b3;
 }
 
 .logo img {
     height: 40px;
-    margin-right: 10px;
 }
 
 .nav-menu ul {
     display: flex;
     list-style: none;
-    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
 }
+
+.nav-menu div {
+    width: 115px;
+    text-align: center;
+}
+
+.nav-menu ul div {
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.nav-menu ul div:hover {
+    color: #0057d9;
+    font-weight: bold;
+    outline: 1px solid #0057d9;
+    box-shadow: #0057d9 3px 3px;
+    transition: 0.3s;
+}
+
+
 
 .search-login {
     display: flex;

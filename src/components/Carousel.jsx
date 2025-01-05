@@ -8,9 +8,9 @@ import img3ForHero from "../../public/img/virgen-panecillo-quito.png";
 const Carousel = () => {
 const [current, setCurrent] = useState(0);
 const images = [
-{ src: img1ForHero, title: "Destino 1", desc: "Explora paisajes inolvidables." },
-{ src: img2ForHero, title: "Destino 2", desc: "Aventuras en la naturaleza." },
-{ src: img3ForHero, title: "Destino 3", desc: "Relájate y disfruta de la vista." },
+{ src: img1ForHero, title: "Centro Historico Quito", desc: "Arquitectura e historia: Las 5 iglesias más impresionantes de Quito" },
+{ src: img2ForHero, title: "Iglesia de la Compañía", desc: "Un ícono del barroco en América Latina: la majestuosa Iglesia de la Compañía de Jesús" },
+{ src: img3ForHero, title: "El Panecillo", desc: "Un cerro Emblemático con las Mejores Vistas de la Ciud" },
 ];
 
 const handlePrev = () => {
