@@ -1,8 +1,8 @@
 .button {
     font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    padding: 5px 15px;
+    padding: .5rem 0.75rem;
     border-radius: 60px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Styles for button white */
@@ -17,7 +17,6 @@
     color: white;
     border: 1px solid transparent;
     transform: translateY(-5px);
-    transition: all 0.3s ease-in-out
 }
 
 /* Styles for button blue */
