@@ -3,6 +3,7 @@ import Carousel from "./components/Carousel";
 import Destinations from "./components/Destinations";
 import Blog from "./components/Blog"
 import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 import './App.css'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
 			<Header />
 			<Carousel />
 			<Destinations />
-			<Blog/>
+			<Blog />
+			<Newsletter />
 			<Footer />
 		</>
 	)
