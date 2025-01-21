@@ -1,22 +1,19 @@
-import Header from "./components/Header";
-import Carousel from "./components/Carousel";
-import Destinations from "./components/Destinations";
-import Blog from "./components/Blog"
-import Footer from "./components/Footer";
-import Newsletter from "./components/Newsletter";
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './components/Home';
+import LoginForm from './components/Login';
+import RegisterForm from './components/RegisterForm';
+import './App.css';
 
 function App() {
 	return (
-		<>
-			<Header />
-			<Carousel />
-			<Destinations />
-			<Blog />
-			<Newsletter />
-			<Footer />
-		</>
-	)
+		<Routes>
+			<Route path="/Que-Hay-Quito" element={<Home />} />
+			<Route path="/Que-Hay-Quito/login" element={<LoginForm />} />
+			<Route path="/Que-Hay-Quito/register" element={<RegisterForm />} />
+		</Routes>
+	);
 }
 
-export default App
+export default App;

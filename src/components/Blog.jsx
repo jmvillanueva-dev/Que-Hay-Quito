@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+  import { Link } from 'react-router-dom'
 import styles from './../styles/blog.module.css'
 import TrenEcuador from '../assets/tren-ecuador.png'
 
 const Blog = () => {
   return (
-    <section id="latest-stories" className={styles.latestStories}>
+    <section id="blog" className={styles.latestStories}>
       <div className="container">
         <div className={styles.moreArticles}>
           <h2>Explore nuestras últimas historias</h2>
