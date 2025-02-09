@@ -16,6 +16,10 @@
     gap: 20px;
 }
 
+.nav-icons {
+    display: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -84,3 +88,21 @@ h6 {
     display: flex;
     gap: 0.23rem;
 }
+
+@media (min-width: 30em) and (max-width: 50em) {
+    .nav-icons {
+        display: block;
+        margin: 0px 10px 0px 10px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .nav-icons:hover {
+        color: #e24550;
+    }
+
+    .nav-text {
+        display: none;
+    }
+  }
+  

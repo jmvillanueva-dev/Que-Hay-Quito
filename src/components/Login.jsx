@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/login.css'
 
-import logo from "../assets/logo.svg";
+import logo from "../assets/icons/logo/logo.svg";
 import googleIcon from "../assets/icons/google-icon.svg";
 import facebookIcon from "../assets/icons/facebook-icon.svg";
 

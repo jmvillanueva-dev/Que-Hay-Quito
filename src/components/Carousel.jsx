@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./../styles/carousel.css";
 import readIcon from "../assets/icons/readIcon.svg";
 
-import img1ForHero from "../../public/img/sanfrancisco.png";
-import img2ForHero from "../../public/img/centro-historico.png";
-import img3ForHero from "../../public/img/chocoandino.png";
+import img1ForHero from "../assets/img/sanfrancisco.png";
+import img2ForHero from "../assets/img/centro-historico.png";
+import img3ForHero from "../assets/img/chocoandino.png";
 
 const Carousel = () => {
     const [current, setCurrent] = useState(0);
