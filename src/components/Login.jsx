@@ -30,7 +30,7 @@ export default function LoginForm() {
             if (email === adminEmail && password === adminPassword) {
                 console.log('Usuario administrador')
                 // Redirigir al dashboard de administrador
-                navigate('/Que-Hay-Quito')
+                navigate('/Que-Hay-Quito/crud')
             } else {
                 console.log('Inicio de sesión exitoso, pero no es administrador')
                 // Redirigir a la página normal
