@@ -75,7 +75,7 @@ return (
     <Button variant="agregarblue" onClick={() => { limpiarCampos(); setModal(true); }}>
     Agregar Libro
     </Button>
-    <div className="grid-container">
+    <div className="grid">
     {libros.map((libro) => (
         <div className="card" key={libro.id}>
         <h3>{libro.nombre}</h3>

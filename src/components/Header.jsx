@@ -45,7 +45,7 @@ const Header = () => {
                 </a>
             </li>
             <li>
-                <a href="#tienda">
+                <a href="/Que-Hay-Quito/tienda">
                     <MdLocalGroceryStore size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text">Tienda</div>
                 </a>

@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: auto;
     margin: 20px auto;
     padding: 20px;
     background: rgb(255, 255, 255);
@@ -16,12 +16,11 @@ body {
 }
 
 
-
 .grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    flex-wrap: nowrap;
-    position: relative;
+    justify-content: center;
 }
 
 .card {
@@ -40,12 +39,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    width: auto;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-}
 .card img {
     width: auto;
     height: 150px;
@@ -83,7 +76,7 @@ body {
     text-align: center;
 }
 
-input {
+.modal-content input {
     display:block;
     width: 500px;
     padding: 8px;
