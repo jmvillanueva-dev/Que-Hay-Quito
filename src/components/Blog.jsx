@@ -1,5 +1,5 @@
 import React from 'react';
-  import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './../styles/blog.module.css'
 import TrenEcuador from '../assets/tren-ecuador.png'
 
@@ -10,10 +10,10 @@ const Blog = () => {
         <div className={styles.moreArticles}>
           <h2>Explore nuestras últimas historias</h2>
           <div>
-            <Link to="/blog2">
+            <Link to="/Que-Hay-Quito/blog2">
               <button className={styles.button}>Leer más noticias</button>
             </Link>
-            <Link to="../pages/BlogPage.jsx">
+            <Link to="/Que-Hay-Quito/blog">
               <button className={styles.button}>Ver más artículos</button>
             </Link>
           </div>

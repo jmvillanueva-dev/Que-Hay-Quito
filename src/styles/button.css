@@ -21,9 +21,9 @@
 
 /* Styles for button blue */
 .button.blue {
-background-color: #0057d9;
-color: white;
-border: none;
+    background-color: #0057d9;
+    color: white;
+    border: none;
 }
 
 .button.blue:hover {
@@ -31,3 +31,56 @@ border: none;
     transform: translateY(-5px);
     transition: all 0.3s ease-in-out
 }
+
+.button.red {
+    background-color: #e24550;
+    color: white;
+    border: none;
+}
+
+.button.red:hover {
+    background-color: #e24550;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out
+}
+
+.button.agregarblue {
+    background-color: #0057d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 40px;
+}
+
+.button.agregarblue:hover {
+    background-color: #267dff;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out
+}
+
+.button.editar {
+    background-color: #0057d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.editar:hover {
+    background-color: #267dff;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out
+}
+
+.button.eliminar {
+    background-color: #e24550;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.eliminar:hover {
+    background-color: #e24550;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out
+}
+
