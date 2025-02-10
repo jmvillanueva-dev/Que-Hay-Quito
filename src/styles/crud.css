@@ -32,6 +32,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 250px;
+    border: 1px solid black;
 }
 
 .card:hover {
