@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'  
+import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import '../styles/login.css'
 
@@ -12,21 +12,30 @@ export default function LoginForm() {
     const [password, setPassword] = useState('')
     const [receiveEmails, setReceiveEmails] = useState(false)
     const [error, setError] = useState('')
-    const [successMessage, setSuccessMessage] = useState('')
     const navigate = useNavigate()
+
+    // Correo y contraseña específicos del administrador
+    const adminEmail = "admin@gmail.com"
+    const adminPassword = "admin123"
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
-        setSuccessMessage('')
 
         const auth = getAuth()
         try {
-            await signInWithEmailAndPassword(auth, email, password)
-            console.log('Inicio de sesión exitoso')
-
-            // Redirigir al dashboard con el mensaje
-            navigate('/Que-Hay-Quito/register')
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+            
+            // Verificar si el correo y la contraseña son los del administrador
+            if (email === adminEmail && password === adminPassword) {
+                console.log('Usuario administrador')
+                // Redirigir al dashboard de administrador
+                navigate('/Que-Hay-Quito')
+            } else {
+                console.log('Inicio de sesión exitoso, pero no es administrador')
+                // Redirigir a la página normal
+                navigate('/Que-Hay-Quito/register')
+            }
         } catch (error) {
             console.error('Error al iniciar sesión:', error)
             setError('Credenciales inválidas. Por favor, intenta de nuevo.')
