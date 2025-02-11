@@ -17,7 +17,7 @@ QueHayQuito es una plataforma web que proporciona información sobre los princip
 ## Instalación y uso
 1. Clonar el repositorio:
    ```sh
-   git clone https://github.com/usuario/QueHayQuito.git
+   git clone https://github.com/jmvillanueva-dev/Que-Hay-Quito.git
    cd Que-Hay-Quito
    ```
 
