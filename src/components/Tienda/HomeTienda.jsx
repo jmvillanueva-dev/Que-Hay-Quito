@@ -4,7 +4,9 @@ import Ofertas from "../../components/Tienda/Ofertas";
 import Titulos from "../../components/Tienda/Titulos";
 import Productos from "../../components/Tienda/Productos";
 import Footer from "../../components/Footer";
-import ContextProvider from "../../context/Context"; 
+import ContextProvider from "../../context/Context";
+import Carousel from "../../components/Tienda/CarouselTienda";
+
 
 
 
@@ -15,7 +17,7 @@ function HomeTienda() {
 		<>
 		<ContextProvider>
 			<Header />
-			<Informacion />
+			<Carousel />
 			<Ofertas />
 			<Titulos />
             <Productos />
