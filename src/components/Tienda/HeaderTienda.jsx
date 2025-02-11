@@ -54,7 +54,7 @@ const HeaderTienda = () => {
                     </Button>
                     <Link to='/Que-Hay-Quito/login'>
                         <Button variant="blue">
-                            <div className="login-button">
+                            <div className="login-buttonTienda">
                                 <img src={userIcon} alt="icon search" />
                             </div>
                         </Button>

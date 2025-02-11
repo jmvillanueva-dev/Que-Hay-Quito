@@ -8,7 +8,7 @@ import BlogPage from './pages/BlogPage'
 import BlogPage2 from './pages/BlogPage2'
 import Crud from './components/Registro de Libros/HomeCrud';
 import Tienda from './components/Tienda/HomeTienda';
-import ContextProvider from './context/Context'; // Asegúrate de importar ContextProvider
+import ContextProvider from './context/Context'; 
 
 import './App.css';
 

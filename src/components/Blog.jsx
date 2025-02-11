@@ -6,7 +6,7 @@ import TrenEcuador from '../assets/tren-ecuador.png'
 const Blog = () => {
   return (
     <section id="blog" className={styles.latestStories}>
-      <div className="container">
+      <div className="container-ferrocarril">
         <div className={styles.moreArticles}>
           <h2>Explore nuestras últimas historias</h2>
           <div>
@@ -23,7 +23,7 @@ const Blog = () => {
           <div className={styles.mainStory}>
             <img src={TrenEcuador} alt="tren inbambura" />
             <div className={styles.mainStoryText}>
-              <span className={styles.category}>NOTICIAS</span>
+              <span >NOTICIAS</span>
               <h3>El ferrocarril vuelve a recorrer Imbabura</h3>
               <p>Ago 26, 2024 • Lectura: 6 min </p>
               <p>La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
