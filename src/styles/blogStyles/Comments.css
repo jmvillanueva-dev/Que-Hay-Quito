@@ -1,88 +1,72 @@
-/* Estilos para la sección de comentarios */
 .comments-container {
-    max-width: 800px;
-    margin: 20px auto;
+    background: linear-gradient(to right, #007bff, #004080);
     padding: 20px;
-    background: linear-gradient(135deg, #007BFF, #0056b3);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
-    transition: transform 0.3s ease-in-out;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
 }
 
-.comments-container:hover {
-    transform: scale(1.02);
+.comments-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.comment {
-    background: white;
-    color: #333;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
-}
-
-.comment:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-}
-
-.comment-text {
-    margin-top: 5px;
-}
-
-.comment-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.comment-button {
-    background: #0056b3;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.comment-button:hover {
-    background: #004099;
-}
-
-.input-container {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.input-container input {
-    flex: 1;
+textarea {
+    width: 90%;
+    height: 80px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    margin: auto;
 }
 
-.input-container button {
-    background: #007BFF;
-    color: white;
+button {
+    background: white;
+    color: #004080;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-weight: bold;
+    margin: 5px;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.input-container button:hover {
-    background: #0056b3;
+button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.comments-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comment-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment-item p {
+    margin: 5px 0;
+}
+
+.comment-item button {
+    background: rgba(255, 255, 255, 0.8);
+    color: #004080;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.comment-item button:hover {
+    background: white;
 }
