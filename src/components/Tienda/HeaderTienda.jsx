@@ -35,11 +35,11 @@ const HeaderTienda = () => {
                 </div>
                 <nav className="nav-menu">
                     <ul>
-                        <li><a href="/Que-Hay-Quito"><div>Destinos</div></a></li>
-                        <li><a href="/Que-Hay-Quito/blog"><div>Sugerencias</div></a></li>
-                        <li><a href="/Que-Hay-Quito/blog2"><div>Blog</div></a></li>
-                        <li><a href="/Que-Hay-Quito/tienda"><div>Tienda</div></a></li>
-                        <li><a href="/Que-Hay-Quito"><div>Contáctanos</div></a></li>
+                        <li><Link to="/Que-Hay-Quito"><div>Destinos</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito/blog"><div>Sugerencias</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito/blog2"><div>Blog</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito/tienda"><div>Tienda</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito"><div>Contáctanos</div></Link></li>
                     </ul>
                 </nav>
                 <div className="search-login">

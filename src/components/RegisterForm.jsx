@@ -60,13 +60,14 @@ export default function RegisterForm() {
 
             if (success) {
                 console.log("Usuario registrado exitosamente!");
+                alert("Usuario registrado exitosamente!");
                 navigate("/Que-Hay-Quito/login");
             } else {
                 setError("Error al registrar el usuario en la base de datos.");
             }
         } catch (e) {
             console.error("Error al registrar usuario: ", e);
-            setError("Error al registrar el usuario. Por favor, inténtalo de nuevo.");
+            setError("La contraseña de de contar con al menos 6 caracteres");
         }
     };
 
