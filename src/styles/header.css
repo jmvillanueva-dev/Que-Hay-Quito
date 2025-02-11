@@ -89,7 +89,7 @@ h6 {
     gap: 0.23rem;
 }
 
-@media (min-width: 30em) and (max-width: 50em) {
+@media (min-width: 10em) and (max-width: 60em) {
     .nav-icons {
         display: block;
         margin: 0px 10px 0px 10px;

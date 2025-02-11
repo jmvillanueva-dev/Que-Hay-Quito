@@ -25,36 +25,36 @@ const Header = () => {
         <nav className="nav-menu">
             <ul>
             <li>
-                <a href="/Que-Hay-Quito">
+                <Link to="/Que-Hay-Quito">
                     <FaMapLocationDot size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text"> 
                         <span >Destinos</span>  
                     </div>
-                </a>
+                </Link>
             </li>
             <li>
-                <a href="/Que-Hay-Quito/blog2">
+                <Link to="/Que-Hay-Quito/blog2">
                 <IoMdStar size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text">Sugerencias</div>
-                </a>
+                </Link>
             </li>
             <li>
-                <a href="/Que-Hay-Quito/blog">
+                <Link to="/Que-Hay-Quito/blog">
                     <FaBlogger size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text">Blog</div>
-                </a>
+                </Link>
             </li>
             <li>
-                <a href="/Que-Hay-Quito/tienda">
+                <Link  to="/Que-Hay-Quito/tienda">
                     <MdLocalGroceryStore size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text">Tienda</div>
-                </a>
+                </Link>
             </li>
             <li>
-                <a href="/Que-Hay-Quito">
+                <Link to="/Que-Hay-Quito">
                     <MdPermContactCalendar size="1.5em" color="#0057d9" className="nav-icons" />
                     <div className="nav-text">Contáctanos</div>
-                </a>
+                </Link>
             </li>
             </ul>
         </nav>
