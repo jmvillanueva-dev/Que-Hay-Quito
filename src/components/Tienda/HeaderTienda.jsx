@@ -36,8 +36,8 @@ const HeaderTienda = () => {
                 <nav className="nav-menu">
                     <ul>
                         <li><Link to="/Que-Hay-Quito"><div>Destinos</div></Link></li>
-                        <li><Link to="/Que-Hay-Quito/blog"><div>Sugerencias</div></Link></li>
-                        <li><Link to="/Que-Hay-Quito/blog2"><div>Blog</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito/blog2"><div>Sugerencias</div></Link></li>
+                        <li><Link to="/Que-Hay-Quito/blog"><div>Blog</div></Link></li>
                         <li><Link to="/Que-Hay-Quito/tienda"><div>Tienda</div></Link></li>
                         <li><Link to="/Que-Hay-Quito"><div>Contáctanos</div></Link></li>
                     </ul>
