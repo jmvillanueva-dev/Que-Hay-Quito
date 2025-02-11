@@ -1,4 +1,5 @@
-import Header from "../../components/Header";
+import Header from "../../components/Tienda/HeaderTienda";
+import Footer from "../../components/Footer";
 import Crud from "../../components/Registro de Libros/Crud";
 
 
@@ -9,6 +10,7 @@ function HomeCrud() {
 		<>
 			<Header />
 			<Crud />
+			<Footer />
 		</>
 	)
 }

@@ -38,7 +38,7 @@ const Productos = () => {
         setVisible((prevVisible) => prevVisible + 3); // Cargar más productos
     };
 
-        const agregarAlCarrito = (producto) => {
+    const agregarAlCarrito = (producto) => {
         setCart((prevCart) => {
             const productoExistente = prevCart.find(item => item.id === producto.id);
             if (productoExistente) {
@@ -50,6 +50,10 @@ const Productos = () => {
             }
             return [...prevCart, { ...producto, cantidad: 1 }]; // Agrega si no existe
         });
+        setNotification(`${producto.nombre} agregado al carrito`);
+        setTimeout(() => {
+            setNotification("");
+        }, 2000);
     };
 
     return (

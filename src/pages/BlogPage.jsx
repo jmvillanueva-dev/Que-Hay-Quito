@@ -2,7 +2,7 @@
 import Carousel from "../blogcomponents/Carousel"
 import FeaturedPosts from "../blogcomponents/FeaturedPosts"
 import BlogList from "../blogcomponents/BlogList"
-import Header from "../components/Header"
+import Header from "../components/Header";
 import Footer from "../components/Footer"
 import Comments from '../blogcomponents/Comments'
 
