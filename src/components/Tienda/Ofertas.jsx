@@ -7,7 +7,7 @@ function Ofertas() {
     return (
         <>
             <div class="flex flex-column align-items banner">
-                <section class="oferts container">
+                <section class="oferts">
 
                     <div class="ofert-1 b1">
                         <div class="ofert-txt">

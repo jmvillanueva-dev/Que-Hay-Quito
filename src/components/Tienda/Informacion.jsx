@@ -5,8 +5,7 @@ import '../../styles/button.css'
 function Informacion() {
     return (
         <>
-            <section id="sitioPrincipal" className="padding-top opciones"> 
-                <div className="container"> 
+            <section id="sitioPrincipal"> 
                     <div className="flex flex-column align-items banner">
                         <header className="headerTienda">
                             <div className="headerTienda-content">
@@ -34,7 +33,6 @@ function Informacion() {
                             </div>
                         </header>
                     </div>
-                </div>
             </section>  
         </>
     )

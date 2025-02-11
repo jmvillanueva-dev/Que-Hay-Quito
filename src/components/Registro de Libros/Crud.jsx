@@ -12,62 +12,72 @@ const [libroActual, setLibroActual] = useState({ nombre: "", imagen: "", precio:
 const [idLibro, setIdLibro] = useState(null);
 
 useEffect(() => {
-obtenerLibros();
+    obtenerLibros();
 }, []);
 
 const obtenerLibros = async () => {
 try {
-    const querySnapshot = await getDocs(collection(db, "libros"));
-    const librosData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    setLibros(librosData);
-} catch (error) {
-    console.error("Error al obtener libros:", error);
+        const querySnapshot = await getDocs(collection(db, "libros"));
+        const librosData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setLibros(librosData);
+    } catch (error) {
+        console.error("Error al obtener libros:", error);
 }
 };
 
 const validarCampos = () => {
-if (!libroActual.nombre.trim() || !libroActual.imagen.trim() || !libroActual.precio || !libroActual.descripcion.trim()) {
-    alert("Todos los campos son obligatorios");
-    return false;
-}
-return true;
+    if (!libroActual.nombre.trim() || !libroActual.imagen.trim() || !libroActual.precio || !libroActual.descripcion.trim()) {
+        alert("Todos los campos son obligatorios");
+        return false;
+    }
+    return true;
 };
 
 const agregarLibro = async () => {
-if (!validarCampos()) return;
-try {
-    await addDoc(collection(db, "libros"), { ...libroActual });
-    setModal(false);
-    limpiarCampos();
-    obtenerLibros();
-} catch (error) {
-    console.error("Error al agregar libro:", error);
-}
+    if (!validarCampos()) return;
+    try {
+        const querySnapshot = await getDocs(collection(db, "libros"));
+        const librosExistentes = querySnapshot.docs.map((doc) => doc.data());
+
+        // Verifica si ya existe un libro con el mismo nombre
+        const libroDuplicado = librosExistentes.some(libro => libro.nombre.toLowerCase() === libroActual.nombre.toLowerCase());
+        if (libroDuplicado) {
+            alert("Este libro ya existe en la base de datos.");
+            return;
+        }
+
+        await addDoc(collection(db, "libros"), { ...libroActual });
+        setModal(false);
+        limpiarCampos();
+        obtenerLibros();
+    } catch (error) {
+        console.error("Error al agregar libro:", error);
+    }
 };
 
 const actualizarLibro = async () => {
-if (!validarCampos()) return;
-try {
-    const libroRef = doc(db, "libros", idLibro);
-    await updateDoc(libroRef, libroActual);
-    setModalEdit(false);
-    obtenerLibros();
-} catch (error) {
-    console.error("Error al actualizar libro:", error);
-}
+    if (!validarCampos()) return;
+    try {
+        const libroRef = doc(db, "libros", idLibro);
+        await updateDoc(libroRef, libroActual);
+        setModalEdit(false);
+        obtenerLibros();
+    } catch (error) {
+        console.error("Error al actualizar libro:", error);
+    }
 };
 
 const eliminarLibro = async (id) => {
-try {
-    await deleteDoc(doc(db, "libros", id));
-    obtenerLibros();
-} catch (error) {
-    console.error("Error al eliminar libro:", error);
-}
+    try {
+        await deleteDoc(doc(db, "libros", id));
+        obtenerLibros();
+    } catch (error) {
+        console.error("Error al eliminar libro:", error);
+    }
 };
 
 const limpiarCampos = () => {
-setLibroActual({ nombre: "", imagen: "", precio: "", descripcion: "" });
+    setLibroActual({ nombre: "", imagen: "", precio: "", descripcion: "" });
 };
 
 return (
@@ -80,8 +90,10 @@ return (
         <div className="card" key={libro.id}>
         <h3>{libro.nombre}</h3>
         <img className="image" src={libro.imagen || "/placeholder.svg"} alt={libro.nombre} />
-        <p>Precio: ${libro.precio}</p>
-        <p>Descripción: {libro.descripcion}</p>
+        <p>Precio:</p>
+        <h3> ${libro.precio} </h3>
+        <p>Descripción:</p>
+        <h5> {libro.descripcion}</h5>
         <Button variant="editar" onClick={() => { setIdLibro(libro.id); setLibroActual(libro); setModalEdit(true); }}>
             Editar
         </Button>

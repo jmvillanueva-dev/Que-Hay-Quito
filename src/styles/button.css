@@ -84,3 +84,16 @@
     transition: all 0.3s ease-in-out
 }
 
+.button.shop {
+    background-color: #0057d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.button.shop:hover {
+    background-color: #e24550;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out
+}

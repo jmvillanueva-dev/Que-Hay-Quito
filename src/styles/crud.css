@@ -30,8 +30,9 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px;
+    width: 350px;
     border: 1px solid black;
+    height: 500px ;
 }
 
 .card:hover {
@@ -47,6 +48,22 @@ body {
 }
 
 .card button{
+    margin: 10px;
+}
+
+.card h3{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.card h5{
+    margin: 10px;
+    text-align: justify;
+}
+
+.card p{
+    text-align: center;
     margin: 10px;
 }
 

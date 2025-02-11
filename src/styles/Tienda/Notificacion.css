@@ -1,0 +1,25 @@
+.notification {
+    position: fixed;
+    top: 20px;  /* Posiciona la notificación 20px desde la parte superior */
+    left: 50%;  /* La coloca en el centro horizontal */
+    transform: translateX(-50%);  /* Ajusta la posición para centrarla exactamente */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        top: 10px;  /* Empieza 10px abajo del lugar donde debe estar */
+    }
+    to {
+        opacity: 1;
+        top: 20px;  /* Termina en la posición final */
+    }
+}
