@@ -35,7 +35,8 @@ export default function LoginForm() {
             } else {
                 console.log('Inicio de sesión exitoso, pero no es administrador')
                 // Redirigir a la página normal
-                navigate('/Que-Hay-Quito/register')
+                alert(" INGRESO EXITOSO")
+                navigate('/Que-Hay-Quito/')
             }
         } catch (error) {
             console.error('Error al iniciar sesión:', error)
