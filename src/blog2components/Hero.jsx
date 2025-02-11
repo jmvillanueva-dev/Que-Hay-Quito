@@ -31,7 +31,7 @@ function Hero() {
         const handleScroll = () => {
         const scrollPosition = window.pageYOffset
         if (heroImageRef.current) {
-            heroImageRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`
+            heroImageRef.current.style.transform = `translateY(${scrollPosition * 0.1}px)`
         }
         }
 
@@ -44,7 +44,7 @@ function Hero() {
     }, [])
 
     return (
-        <section className="hero">
+        <section className="hero-blog">
         <div className="hero-image" ref={heroImageRef}></div>
         <h1 id="main-title" ref={titleRef}>
             {title}

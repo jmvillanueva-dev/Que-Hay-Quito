@@ -72,7 +72,7 @@ function EventSection() {
         <h2>Eventos Destacados</h2>
         <div className="card-container">
             {events.map((event, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card-blog">
                 <img src={event.image || "/placeholder.svg"} alt={event.title} />
                 <div className="card-info">
                 <h3>{event.title}</h3>
